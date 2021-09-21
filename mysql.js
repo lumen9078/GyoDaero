@@ -1,12 +1,12 @@
 var mysql = require('mysql');
 
+const obj = require("./key");
 var db = mysql.createConnection({
-  host     : 'localhost',
-  user     : 'root',
-  password : '2546',
-  database : 'capstone'
+  host     : obj.host,
+  user     : obj.user,
+  password : obj.password,
+  database : obj.database
 });
-
 db.connect();
 
 exports.member = function(){
