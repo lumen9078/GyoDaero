@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>로그인</title>
+    <link href="./style.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a onclick="location.href = '/'">Home</a></li>
+            </ul>
+        </nav>
+        <div><h1>교대로</h1></div>
+    </header>
+    <div class ="loginForm">
+        <div>
+            <form action="/login_access" method="post">
+                <div class="idForm">
+                    <input type="text" class='id' name="ID" placeholder="아이디입력" required>
+                </div>
+                <div class='passForm'>
+                    <input type="password" class='pw' name="PW" placeholder="비밀번호입력" required>
+                </div>
+                <div>
+                    <input type="submit" class="btn" value="로그인"></input>
+                </div>
+                <div>
+                    <button type="button" class="btn" onclick="location.href = '/create'">회원가입</button>           
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%=name%></title>
+    <link href="/restaurant_menu.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <script>
+                    var s = false;
+                    function state(){
+                        if (document.cookie){
+                            s = true;
+                            document.write('Logout');
+                        }
+                        else {
+                            s = false;
+                            document.write('Login');
+                        }
+                    }
+                    function clickEvent(){
+                        if (s==false){
+                            window.location.href = "/login";
+                        }
+                        else {
+                            window.location.href = "/logout";
+                        }
+                    }
+                    function show(){
+                        if (document.cookie){
+                            document.write('MyPage');
+                            document.getElementById("mypage").style.display ='block';
+                        }
+                    }
+                </script>
+                <li><a onclick="location.href = '/'">Home</a></li>
+                <li><a id="mypage" style="display:none" onclick="location.href = '/user'"><script>show();</script></a><li>
+                <li><a onclick="clickEvent();"><script>state();</script></a></li>
+            </ul>
+        </nav>
+        <div><h1>교대로</h1></div>
+    </header>
+    <div id ="content">
+    <section>
+        <a class="button" onclick="location.href = '/restaurant'">음식점</a>
+        <a class="button" onclick="location.href = '/cafe'">카페</a>
+    </section>
+    <section>
+        <p ><a ><%=name%></a></p>
+        <a>총 좌석 : <%=seat[0].all_seat%></a>
+        <a>잔여좌석 : <%=seat[0].remain_seat%></a>
+        
+    </section>
+    <section>
+        <a  id = "text"></a>
+        <script>
+            var str = document.getElementById("text");
+            str.innerHTML = `<% for (var i=0;i<data.length;i++){ %>
+                            <li><%= data[i].menu_name %> : <%= data[i].price %></li>
+                            <br> <% } %>`;
+        </script>
+    </section>
+    </div>
+    <footer>
+        
+    </footer>
+</body>
+</html>

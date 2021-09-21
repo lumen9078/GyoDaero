@@ -1,0 +1,98 @@
+body{
+    color: white;
+    margin: 0;
+    padding: 0;
+    font-size: 1.2em;
+    font-family: 'Hack';
+}
+
+header{
+    color:  white;
+    background-color: rgb(189, 224,247);
+    padding: 20px;
+}
+
+section {
+    background-color: white;
+    padding: 20px;
+    color: black;
+    display: flex;
+    justify-content: flex-start;
+}
+
+footer{
+    background-color: rgb(189, 224,247);
+    padding: 20px;
+}
+
+section > div {
+    background-color: blueviolet;
+    text-align: center;
+    margin: auto;
+    width: 150px;
+    height: 70px;
+    padding: 10px;
+}
+
+ul{
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    float: right;
+}
+
+li{
+    display: inline;
+    margin: 0 20px 0 0 ;
+    float: left;
+}
+
+.search{
+    border-style: dotted ;
+    border-width: 2px;
+    padding: 5px;
+    margin: 0;
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.canvas_section{
+    display: block;
+}
+
+.canvas {
+    margin: 10px;
+    padding: 10px;
+    background: cornsilk;
+    border: thin inset #aaaaaa;
+}
+
+section > a {
+	-webkit-transition: all 200ms cubic-bezier(0.390, 0.500, 0.150, 1.360);
+	-moz-transition: all 200ms cubic-bezier(0.390, 0.500, 0.150, 1.360);
+	-ms-transition: all 200ms cubic-bezier(0.390, 0.500, 0.150, 1.360);
+	-o-transition: all 200ms cubic-bezier(0.390, 0.500, 0.150, 1.360);
+	transition: all 200ms cubic-bezier(0.390, 0.500, 0.150, 1.360);
+	display: block;
+	max-width: 180px;
+	text-decoration: none;
+	border-radius: 4px;
+	padding: 20px 30px;
+}
+
+ a.button {
+	color: rgba(30, 22, 54, 0.6);
+	box-shadow: rgba(30, 22, 54, 0.4) 0 0px 0px 2px inset;
+}
+
+ a.button:hover {
+	color: rgba(255, 255, 255, 0.85);
+	box-shadow: rgba(30, 22, 54, 0.7) 0 0px 0px 40px inset;
+}
+
+/* #content{
+    position: relative;
+    max-width: 550px;
+    margin: 10px auto;
+    border: 1px solid black;
+  } */

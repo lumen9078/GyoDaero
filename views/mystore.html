@@ -1,0 +1,106 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>마이페이지</title>
+    <link href="/mystore.css" rel="stylesheet" />
+</head>
+<body>
+    <script type="text/javascript">
+        function getPermision() {
+            if(<%=permission%>==0){
+                return document.write(`미승인`);
+            }
+            else{
+                return document.write('승인');
+            }
+        }
+    </script>
+        <header>
+        <nav>
+            <ul>
+                <li><a onclick="location.href = '/'">Home</a></li>
+                <li><a onclick="location.href = '/logout'">Logout</a></li>
+            </ul>
+        </nav>
+        <div><h1>마이페이지</h1></div>
+    </header>
+    <div class ="loginPage">
+        <div>
+            <h2>
+                메뉴관리
+            </h2>
+        </div>
+    </div>
+    <table class = "userpageTable">
+        <tr>
+            <th><lable>가게</lable></th>
+            <td><p><%=name%></p></td>
+        </tr>
+        <tr>
+            <th><label>승인여부</label></th>
+            <td><p>Permission : <script>getPermision()</script></p></td>
+        </tr>
+        <tr>
+            <th><label>가게관리</label></th>
+            <td>
+                <button id="btnmenu" style="display:block" onclick=showmenu();>메뉴 추가</button>
+                <div id="menu" style="display:none">
+                    <form action = "/menu_process", method="post">
+                        <input type="text" name="menu_name" placeholder="메뉴 이름 입력">
+                        <input type="text" name="price" placeholder="가격 입력">
+                        <input type="hidden" name="storenumber" value='<%=storeNumber%>'>
+                        <input type="submit" value="승인">
+                    </form> 
+                </div>
+
+                <button id="btnseat" style="display:block" onclick=showseat();>좌석 추가</button>
+                <div id="seat" style="display:none">
+                    <form action = "/seat_process", method="post">
+                        <input type="text" name="all_seat" placeholder="총 좌석 입력">
+                        <input type="text" name="remain_seat" placeholder="잔여 좌석 입력">
+                        <input type="hidden" name="storenumber" value='<%=storeNumber%>'>
+                        <input type="submit" value="승인">
+                    </form> 
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <th>등록된메뉴</th>
+            <td>
+                <p id = "text"></p>
+            <script>
+                var str = document.getElementById("text");
+                str.innerHTML = `<% for (var i=0;i<data.length;i++){ %>
+                                <%= data[i].menu_name %>   <%=data[i].price%>원
+                                <br><br> <% } %>`;
+            </script>
+            </td>
+        </tr>
+    </table>
+    
+    <footer>
+            
+            
+    </footer>
+    <script>
+        function showmenu() {
+            if(document.getElementById("menu").style.display =='none'){
+                document.getElementById("menu").style.display ='block';
+            }
+            else{
+                document.getElementById("menu").style.display ='none';
+            }
+        }
+        function showseat() {
+            if(document.getElementById("seat").style.display =='none'){
+                document.getElementById("seat").style.display ='block';
+            }
+            else{
+                document.getElementById("seat").style.display ='none';
+            }
+        }
+    </script>
+</body>
+</html>

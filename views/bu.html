@@ -1,0 +1,67 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>마이페이지</title>
+</head>
+<body>
+        <header>
+        <nav>
+            <ul>
+                <li><a onclick="location.href = '/'">Home</a></li>
+                <li><a onclick="location.href = '/logout'">Logout</a></li>
+            </ul>
+        </nav>
+        <div><h1>교대로</h1></div>
+    </header>
+    <p>USER : <%= data[0].name%></p>
+    <p>ID : <%= data[0].id %></p>
+    <script>
+        if ('<%= data[0].phone %>') {
+            document.write('<p>PHONE : <%= data[0].phone %></p>');
+        }
+        else {
+            document.write('전화번호가 없습니다.');
+        }
+        if ('<%= data[0].email %>') {
+            document.write('<p>EMAIL : <%= data[0].email %></p>');
+        }
+        else {
+            document.write('이메일이 없습니다.')
+        }
+    </script>
+    <p>TYPE : <%= data[0].user_type %></p>
+    <footer>
+            <button id="btnstore" style="display:block" onclick=show();>가게 추가</button>
+            <div id="store" style="display:none">
+                <form action = "/menu_process", method="post">
+                    <input type="text" name="store_number" placeholder="사업자 번호 입력">
+                    <input type="text" name="store_name" placeholder="가게 이름 입력">
+                    <input type="radio" id="restaurant" name="group" value="user" checked> 음식점
+                    <input type="radio" id="cafe" name="group" value="business"> 카페
+                    <input type="text" name="store_phone" placeholder="가게 번호 입력">
+                    <input type="hidden" name="id" value='<%= data[0].id %>'>
+                    <input type="submit" value="승인">
+                </form> 
+            </div>
+            <p id = "text"></p>
+            <script>
+                var str = document.getElementById("text");
+                str.innerHTML = `<% for (var i=0;i<data.length;i++){ %>
+                                <a onclick="location.href = '/business/<%= data[i].store_name %>'"><%= data[i].store_name %></a>
+                                <br><br> <% } %>`;
+            </script>
+    </footer>
+    <script>
+        function show() {
+            if(document.getElementById("store").style.display =='none'){
+                document.getElementById("store").style.display ='block';
+            }
+            else{
+                document.getElementById("store").style.display ='none';
+            }
+        }
+    </script>
+</body>
+</html>

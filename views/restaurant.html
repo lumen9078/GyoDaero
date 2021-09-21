@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>음식점</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <script>
+                    var s = false;
+                    function state(){
+                        if (document.cookie){
+                            s = true;
+                            document.write('Logout');
+                        }
+                        else {
+                            s = false;
+                            document.write('Login');
+                        }
+                    }
+                    function clickEvent(){
+                        if (s==false){
+                            window.location.href = "/login";
+                        }
+                        else {
+                            window.location.href = "/logout";
+                        }
+                    }
+                    function show(){
+                        if (document.cookie){
+                            document.write('MyPage');
+                            document.getElementById("mypage").style.display ='block';
+                        }
+                    }
+                </script>
+                <li><a onclick="location.href = '/'">Home</a></li>
+                <li><a id="mypage" style="display:none" onclick="location.href = '/user'"><script>show();</script></a><li>
+                <li><a onclick="clickEvent();"><script>state();</script></a></li>
+            </ul>
+        </nav>
+        <div><h1>교대로</h1></div>
+        <link href="./restaurant.css" rel="stylesheet" type="text/css" />
+    </header>
+    <div id = "content">
+    <section>
+        <a class="button" onclick="location.href = '/restaurant'">음식점</a>
+
+        <a class="button" onclick="location.href = '/cafe'">카페</a>
+    </section>
+    <section class = section>
+        <p id = "text"></p>
+        <script>
+            var str = document.getElementById("text");
+            str.innerHTML = `<% for (var i=0;i<data.length;i++){ %>
+                            <a onclick="location.href = '/restaurant/<%= data[i].store_name %>'"><%= data[i].store_name %></a>
+                            <br><br> <% } %>`;
+        </script>
+</section>
+</div>
+<footer>
+        
+</footer>
+</body>
+</html>

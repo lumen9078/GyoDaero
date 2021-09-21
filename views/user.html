@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>음식점</title>
+    <link href="/user.css" rel="stylesheet" />
+</head>
+<body>
+        <header>
+        <nav>
+            <ul>
+                <li><a onclick="location.href = './'">Home</a></li>
+                <li><a onclick="location.href = '/logout'">Logout</a></li>
+            </ul>
+        </nav>
+        <div>
+            <h1>
+                마이페이지
+            </h1>
+        
+        </div>
+    </header>
+    <div class ="loginPage">
+        <div>
+            <h2>회원정보</h2>
+        </div>
+        <table class ="userpageTable">
+            <tr>
+                <th><lable>USER</lable></th>
+                <td><p><%= data[0].name%></p></td>
+            </tr>
+            <tr>
+                <th><lable>ID</lable></th>
+                <td><p><%= data[0].id %></p></td>
+            </tr>
+
+            <tr>
+                <th><lable>Phone</lable></th>
+                <td>
+                    <script>
+                        if ('<%= data[0].phone %>') {
+                            document.write('<p>PHONE : <%= data[0].phone %></p>');
+                        }
+                        else {
+                            document.write('<p>전화번호가 없습니다.</p>');
+                        }
+                    </script>
+                </td>
+            </tr>
+            <tr>
+                <th><lable>Email</lable></th>
+                <td>
+                    <script>
+                    if ('<%= data[0].email %>') {
+                        document.write('<p>EMAIL : <%= data[0].email %></p>');
+                    }
+                    else {
+                        document.write('<p>이메일이 없습니다.</p>')
+                    }
+                </script>
+                </td>
+            </tr>
+            
+        </table> 
+    </div>   
+    
+    <footer>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+    <header>
+        <link href="./mypage.css" rel="stylesheet" type="text/css" />
+    </header>
+
+<div class="wrap">
+    <div class="greenContainer">
+      <div>
+        <div class="name">마이페이지</div>
+      </div>    
+    </div>
+    <div class="summaryContainer">
+      <div class="item">
+          <div class="number">1</div>
+          <div>아이디</div>
+        </div>
+        <div class="item">
+            <div class="number">1</div> 
+          <div>내가게</div>
+        </div>
+        <div class="item">
+          <div class="number">35</div>
+          <div>잔여석</div>
+        </div>
+    </div>  
+    <div class="shippingStatusContainer">
+      <div class="title">
+        가게관리
+      </div>
+      <div class="status">
+        
+        <div class="item">
+            <div>
+                <button id="spot" onclick="showmap(this.id);">가게추가</button>
+                <div id="spot" style="position:absolute; visibility:hidden; background-color: rgb(241, 241, 241);">
+                  <div class="loginForm">
+                    가게
+                  </div>
+                </div>
+            </div>
+            
+        </div>     
+        <div class="item">
+            <div>
+                <button onclick="showmap(spot1);">메뉴추가</button>
+                <div id="spot1" style="position:absolute; visibility:hidden; background-color: rgb(241, 241, 241);">
+                  <div class="loginForm">
+                    바보
+                  </div>
+                </div>
+                
+            </div>
+        </div>     
+        <div class="item">
+            <div>
+                <button data-num="3">잔여석업데이트</button>
+            </div>
+        </div>    
+      </div>  
+    </div>
+
+    
+</div>
+
+
+
+
+<script type="text/javascript">
+    function showmap(id) {
+      console.log(id);
+      if(document.all.spot.style.visibility=="hidden") {
+        document.all.spot.style.visibility="visible";
+        return false;
+      }
+      if(document.all.spot.style.visibility=="visible") {
+        document.all.spot.style.visibility="hidden";
+        return false;
+     }
+    }
+    </script>

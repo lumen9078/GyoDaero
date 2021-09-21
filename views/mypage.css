@@ -1,0 +1,131 @@
+body{
+    padding: 0;
+    margin: 0;
+  }
+  div{
+    box-sizing: border-box;
+  }
+  
+  /* alert badge */
+  .circle{
+    display: inline-block;
+    width: 5px;
+    height: 5px;
+    border-radius: 2.5px;
+    background-color: #ff0000;
+    position: absolute;
+    top: -5px;
+    left: 110%;
+  }
+  
+  /* 녹색 텍스트 */
+  .green{
+    color: #24855b;
+  }
+  
+  .wrap{
+    background-color: #F8F8F8;  
+  }
+  /* 녹색배경 */
+  .greenContainer{  
+    height: 132px;
+    background-color: #24855b;    
+    
+    display: flex;
+    align-items: flex-end;
+    padding: 16px;
+  }
+  
+  .greenContainer .name{
+     font-size: 20px;
+    font-weight: bold;
+    color: #ffffff;
+  } 
+  .greenContainer .modify{
+    margin-left: auto;
+  }
+  
+  /* 단골상점 , 상품후기 , 적립금 박스 */
+  .summaryContainer{
+    background-color: white;  
+    display: flex;  
+    padding: 21px 16px;  
+    height: 90px;
+    margin-bottom: 10px;
+  }
+  /* 단골상점 , 상품후기 , 적립금 */
+  .summaryContainer .item{
+    flex-grow: 1
+  }
+  /* 녹색 숫자 */
+  .summaryContainer .number{
+    font-size: 19px;
+    font-weight: bold;
+    color: #24855b;
+  }
+  /* 텍스트 */
+  .summaryContainer .item > div:nth-child(2){
+    font-size: 13px;
+  }
+  
+  /* ================== 주문/배송조회 박스 시작 ==================== */
+  .shippingStatusContainer{
+    padding: 21px 16px;
+    background-color: white;
+    margin-bottom: 10px;
+  }
+  
+  /* 주문/배송조회 타이틀 */
+  .shippingStatusContainer .title{
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 15px;
+  }
+
+  .shippingStatusContainer .status{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 21px;
+  }
+  /* 장바구니 결제완료 배송중 구매확정 [아이템]  */
+  .shippingStatusContainer .item{
+    display: flex;
+  }
+  
+  .shippingStatusContainer .number{
+    font-size: 31px;
+    font-weight: 500;
+    text-align: center;
+  }
+  .shippingStatusContainer .text{
+    font-size: 12px;
+    font-weight: normal;
+    color: #c2c2c2;
+    text-align: center;
+  }
+  .shippingStatusContainer .icon{
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    width: 16px;
+    height: 16px;
+  }
+ 
+ .shippingStatusContainer .poplayer{
+   position: absolute;
+   visibility: hidden;
+   background-color: beige;
+ }
+
+ .loginForm {
+  position:absolute;
+  width:300px;
+  height:400px;
+  transform: translate(0,5%);
+  background-color:#5a5858a1;
+  text-align:center;
+  border-radius: 15px;
+  border-style: outset;
+  border-width: 1px;
+  border-color: black;
+}

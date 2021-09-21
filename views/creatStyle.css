@@ -1,0 +1,57 @@
+.creatTable th, .creatTable td {
+    padding: 10px;
+    box-sizing: border-box;
+    border-bottom: 1px solid #ddd;   
+     
+}
+
+.creatTable th{
+    text-align: center;
+    background-color: gray;
+    width: 300px;
+}
+
+.creatTable td{
+    width: 720px;
+    color: black;
+}
+
+.creatTable .first{
+    border-top: 2px solid #333;
+}
+
+.creatTable .textForm{
+    width: 420px;
+    height: 42px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 0 10px;
+    box-sizing: border-box;
+}
+
+.btn_area{
+    text-align: center;
+    margin:  30px;
+}
+
+button{
+    width: 200px;
+    height: 70px;
+    margin: 0 10px;
+    border: 0;
+    font-size: 20px;
+}
+
+.btn_creat{
+    background-color: #091d53;
+    color: #fff;
+}
+.btn{
+    width: 80px;
+    height: 42px;
+    border: 0;
+    background-color: navy;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 10px;
+}

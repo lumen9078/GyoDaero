@@ -1,0 +1,46 @@
+body{
+    margin: 0px;
+    padding: 0px;
+}
+
+.userpageTable th{
+    text-align: center;
+    border: 1px solid black;
+    width: 300px;
+}
+
+.userpageTable td{
+    border: 1px solid black;
+    width: 720px;
+}
+
+.userpageTable .first{
+    border-top: 2px solid #333;
+}
+
+ul{
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    float: right;
+}
+
+li{
+    display: inline;
+    margin: 0 20px 0 0 ;
+}
+
+header{
+    color:  white;
+    background-color: rgb(189, 224, 247);
+    padding: 20px;
+}
+
+footer{
+    background-color: rgb(189, 224, 247);
+    padding: 20px;
+}
+
+.loginPage .h2{
+    padding: 20px;
+}

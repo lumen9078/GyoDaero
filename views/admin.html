@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>마이페이지</title>
+    <link href="/admin.css" rel="stylesheet" />
+</head>
+<body>
+        <header>
+        <nav>
+            <ul>
+                <li><a onclick="location.href = '/'">Home</a></li>
+                <li><a onclick="location.href = '/logout'">Logout</a></li>
+            </ul>
+        </nav>
+        <div><h1>교대로</h1></div>
+    </header>
+    <div class = "loginPage">
+        <div>
+            <h2>관리</h2>
+        </div>
+        <table class = "userpageTable">
+            <tr>
+                <th><lable>USER</lable></th>
+                <td><p><%=name%></p></td>
+            </tr>
+            <tr>
+                <th><Label>미승인가게</Label></th>
+                <td>
+                    <p id = "text"></p>
+            <script>
+                var str = document.getElementById("text");
+                str.innerHTML = `<% for (var i=0;i<data.length;i++){ %>
+                                <form action="/permission", method="post">
+                                <input type="hidden" name="number" value="<%= data[i].store_number %>">
+
+                                <a name="number" value="<%= data[i].store_number %>">
+                                사업자 번호 : <%=data[i].store_number%> 
+                                가게 이름 : <%= data[i].store_name %>
+                                가게 분류 : <%= data[i].category %>
+                                승인여부 : <%= data[i].permission %></a>
+                                <input type="submit" value="승인">
+                                </form>
+                                <br><br> <% } %>`;
+            </script>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <footer>
+            
+    </footer>
+</body>
+</html>
