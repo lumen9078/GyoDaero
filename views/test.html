@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./test.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+</head>
+<body>
+    <script>
+        var s = false;
+        function state(){
+            if (document.cookie){
+                s = true;
+                document.write('Logout');
+            }
+            else {
+                s = false;
+                document.write('Login');
+            }
+        }
+        function clickEvent(){
+            if (s==false){
+                window.location.href = "/login";
+            }
+            else {
+                window.location.href = "/logout";
+            }
+        }
+        function show(){
+            if (document.cookie){
+                document.write('MyPage');
+                document.getElementById("mypage").style.display ='block';
+            }
+        }
+    </script>
+    <div class="nav">
+        <div class="logo">
+            <img src="/img/gyodaeroLogo.jpg" alt="">
+        </div>
+        <div class="nav_but">
+            <a onclick="location.href = '/'">Home</a>
+            <a onclick="clickEvent();"><script>state();</script></a>
+            <a id="mypage" style="display:none" onclick="location.href = '/user'"><script>show();</script></a>
+        </div>
+    </div>
+
+    <section class="header">
+        <div class="title">
+            <img src="/img/logo.png" alt="">
+            <h1>FRONT END</h1>
+            <p>아기사자 화이팅!</p>
+        </div>
+    </section>
+
+    <section class="intro">
+        <div class="card">
+            <i class="fab fa-css3-alt"></i>
+            <h1>DJANGO</h1>
+            <p>Django는 2005년부터 시작된 Python의 오픈 소스 웹 프레임워크이다. Django는 풀 스택 프레임워크이다.</p>
+        </div>
+        <div class="card">
+            <i class="fas fa-cloud-download-alt"></i>
+            <h1>PYTHON</h1>
+            <p>창시자는 귀도 반 로섬(Guido van Rossum). 1989년 크리스마스 주에, 연구실이 닫혀있어서 심심한 김에 만들었다.</p>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="left">
+                <h1>KNU X LIKELION</h1>
+                <p>http://knulikelion.herokuapp.com</p>
+                <div class="sns">
+                    <i class="fab fa-twitter"></i>
+                    <i class="fab fa-facebook-square"></i>
+                    <i class="fab fa-instagram"></i>
+                    <i class="fab fa-github"></i>
+                </div>
+            </div>
+            <div class="right">
+                <div class="list">
+                    <h2>CONTECT</h2>
+                    <ul>
+                        <li>contect #1</li>
+                        <li>contect #2</li>
+                        <li>contect #3</li>
+                        <li>contect #4</li>
+                    </ul>
+                </div>
+                <div class="list">
+                    <h2>ABOUT</h2>
+                    <ul>
+                        <li>about #1</li>
+                        <li>about #2</li>
+                        <li>about #3</li>
+                        <li>about #4</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
