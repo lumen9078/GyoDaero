@@ -12,7 +12,7 @@ body{
 }
 
 .nav .logo img{
-    width:100px;
+    width:120px;
 }
 
 .nav .nav_but a{
@@ -23,14 +23,15 @@ body{
 }
 
 .header{
-    background: url(../img/bg.jpg); /* 배경 설정 */
+    background: url(../img/poto1.jpg); /* 배경 설정 */
     background-position: center; /* 배경 위치 중앙 */
     background-size: cover; /* 배경 크기 : 그림 하나를 꽉차게 */
-    height:700px; /* header 높이는 700px */
+    height:400px; /* header 높이는 400px */
     display: flex; 
     align-items: center;
     justify-content: center;
 }
+
 .header .title{
     text-align: center; /* 요소 중앙 배열 */
 }
@@ -46,29 +47,6 @@ body{
     margin-bottom:0; /* h1 아래쪽 margin을 0으로 해줍니다. */
 }                      /* 기본적으로 h1은 margin을 가지고 있으므로 필요 시에 조정해줍니다 */
 
-.header .title p{
-    margin-top:0;
-    margin-bottom:30px;
-    color:#444;
-}
-
-.header .title button{
-    background: black;
-    color:white;
-    border:2px solid white; /* 테두리를 정의 합니다 // border:두께 형태 색상 */
-    border-radius:5px; /* 테두리를 둥글게 바꿔줍니다 */
-    padding:10px 30px;
-    font-size:14px;
-    transition: .5s ease; 
-}
-
-.header .title button:hover{
-    transition: .5s ease;
-    border:2px solid black;
-    background: transparent;
-    color:black;
-}
-
 .intro{
     display: flex; 
     justify-content: center;
@@ -80,21 +58,18 @@ body{
 .intro .card{
     flex:1;
     text-align: center;
-    margin: 150px 40px;
+    margin: 80px 40px;
 }
 
-.intro .card i{
+.intro .card img{
     font-size: 70px;
     color: #444;
+    margin-top: 0px;
     margin-bottom: 30px;
 }
 
 .intro .card h1{
     letter-spacing: 0.2em;
-}
-
-.intro .card p{
-    font-size: 10px;
 }
 
 .service{
@@ -132,24 +107,6 @@ body{
     word-break: keep-all; /* 줄바꿈이 발생할 때, 단어 단위로 나누어 줍니다*/
     font-size:12px;
 }
-/* 대문 사진에 사용했던 버튼 속성과 동일 */
-.service .text button{
-    background: black;
-    color:white;
-    border:2px solid white; 
-    border-radius:5px; 
-    padding:5px 15px;
-    font-size:14px;
-    transition: .5s ease; 
-}
-
-.service .text button:hover{
-    transition: .5s ease;
-    border:2px solid black;
-    background: transparent;
-    color:black;
-}
-
 
 .service_2{
     background: white;
@@ -173,6 +130,7 @@ body{
 }
 
 .service_2 .text{
+    text-align: end; /* 요소들을 오른쪽 맞춤으로 정렬해줍니다 */
     color: #444;
     padding-right:100px;
 }
@@ -184,23 +142,6 @@ body{
     word-wrap: break-word;
     word-break: keep-all;
     font-size:12px;
-}
-
-.service_2 .text button{
-    background: white;
-    color:black;
-    border:2px solid black; 
-    border-radius:5px; 
-    padding:5px 15px;
-    font-size:14px;
-    transition: .5s ease; 
-}
-
-.service_2 .text button:hover{
-    transition: .5s ease;
-    border:2px solid white;
-    background: black;
-    color:white;
 }
 
 footer{
@@ -224,11 +165,6 @@ footer .container .left{
 
 footer .container .left h1{
     margin: 0;    
-}
-
-footer .container .left p{
-    margin: 0;
-    font-size: 10px;
 }
 
 footer .container .left .sns{
@@ -275,13 +211,4 @@ footer .container .right .list ul li{
 
 footer .container .right .list ul li:hover{
     background: #222;
-}
-
-footer .copy_right{
-    text-align: center;
-}
-
-footer .copy_right p{
-    font-size: 10px;
-    margin: 0;
 }

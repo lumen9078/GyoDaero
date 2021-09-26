@@ -1,98 +1,214 @@
 body{
-    color: white;
-    margin: 0;
-    padding: 0;
-    font-size: 1.2em;
-    font-family: 'Hack';
+    margin:0;
 }
 
-header{
-    color:  white;
-    background-color: rgb(189, 224,247);
-    padding: 20px;
-}
-
-section {
-    background-color: white;
-    padding: 20px;
-    color: black;
+.nav{
+    height: 70px;
     display: flex;
-    justify-content: flex-start;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1000px;
+    margin:auto;
+}
+
+.nav .logo img{
+    width:120px;
+}
+
+.nav .nav_but a{
+    text-decoration: none;
+    padding-left: 20px;
+    padding-right: 20px;
+    color:black;
+}
+
+.header{
+    background: url(../img/poto1.jpg); /* 배경 설정 */
+    background-position: center; /* 배경 위치 중앙 */
+    background-size: cover; /* 배경 크기 : 그림 하나를 꽉차게 */
+    height:400px; /* header 높이는 400px */
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+}
+
+.header .title{
+    text-align: center; /* 요소 중앙 배열 */
+}
+
+.header .title img{
+    width:100px;
+}
+
+.header .title h1{
+    font-size:40px;
+    color:#444;
+    letter-spacing: 0.2em; /* 글자 간격 조정 */
+    margin-bottom:0; /* h1 아래쪽 margin을 0으로 해줍니다. */
+}                      /* 기본적으로 h1은 margin을 가지고 있으므로 필요 시에 조정해줍니다 */
+
+.intro{
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.intro .card{
+    flex:1;
+    text-align: center;
+    margin: 80px 40px;
+}
+
+.intro .card img{
+    font-size: 70px;
+    color: #444;
+    margin-top: 0px;
+    margin-bottom: 30px;
+}
+
+.intro .card h1{
+    letter-spacing: 0.2em;
+}
+
+.service{
+    background: #ddd;
+}
+
+.service .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1000px;
+    margin:auto;
+}
+
+.service .img{
+    height: 300px;
+}
+
+.service .img img{
+    height: 100%;
+    width: auto;
+}
+
+.service .text{
+    text-align: end; /* 요소들을 오른쪽 맞춤으로 정렬해줍니다 */
+    color: #444;
+    padding-left:100px;
+}
+
+.service .text h1{
+    letter-spacing: 0.2em;
+}
+.service .text p{
+    word-wrap: break-word; /* 줄바꿈이 발생할 때, 단어 단위로 나누어 줍니다*/
+    word-break: keep-all; /* 줄바꿈이 발생할 때, 단어 단위로 나누어 줍니다*/
+    font-size:12px;
+}
+
+.service_2{
+    background: white;
+}
+
+.service_2 .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1000px;
+    margin:auto;
+}
+
+.service_2 .img{
+    height: 300px;
+}
+
+.service_2 .img img{
+    height: 100%;
+    width: auto;
+}
+
+.service_2 .text{
+    text-align: end; /* 요소들을 오른쪽 맞춤으로 정렬해줍니다 */
+    color: #444;
+    padding-right:100px;
+}
+
+.service_2 .text h1{
+    letter-spacing: 0.2em;
+}
+.service_2 .text p{
+    word-wrap: break-word;
+    word-break: keep-all;
+    font-size:12px;
 }
 
 footer{
-    background-color: rgb(189, 224,247);
-    padding: 20px;
+    color: white;
+    background: black;
+    padding-top:50px;
+    padding-bottom: 50px;
 }
 
-section > div {
-    background-color: blueviolet;
-    text-align: center;
-    margin: auto;
-    width: 150px;
-    height: 70px;
-    padding: 10px;
-}
-
-ul{
-    margin: 0;
-    padding: 0;
-    list-style-type: none;
-    float: right;
-}
-
-li{
-    display: inline;
-    margin: 0 20px 0 0 ;
-    float: left;
-}
-
-.search{
-    border-style: dotted ;
-    border-width: 2px;
-    padding: 5px;
-    margin: 0;
+footer .container{
+    max-width: 1000px;
+    margin:auto;
+    padding-bottom: 10px;
     display: flex;
-    flex-direction: row-reverse;
+    align-items: center;
 }
 
-.canvas_section{
-    display: block;
+footer .container .left{
+    flex: 1
 }
 
-.canvas {
-    margin: 10px;
-    padding: 10px;
-    background: cornsilk;
-    border: thin inset #aaaaaa;
+footer .container .left h1{
+    margin: 0;    
 }
 
-section > a {
-	-webkit-transition: all 200ms cubic-bezier(0.390, 0.500, 0.150, 1.360);
-	-moz-transition: all 200ms cubic-bezier(0.390, 0.500, 0.150, 1.360);
-	-ms-transition: all 200ms cubic-bezier(0.390, 0.500, 0.150, 1.360);
-	-o-transition: all 200ms cubic-bezier(0.390, 0.500, 0.150, 1.360);
-	transition: all 200ms cubic-bezier(0.390, 0.500, 0.150, 1.360);
-	display: block;
-	max-width: 180px;
-	text-decoration: none;
-	border-radius: 4px;
-	padding: 20px 30px;
+footer .container .left .sns{
+    margin-top : 30px;
 }
 
- a.button {
-	color: rgba(30, 22, 54, 0.6);
-	box-shadow: rgba(30, 22, 54, 0.4) 0 0px 0px 2px inset;
+footer .container .left .sns i{
+    font-size: 24px;
+    margin-right: 20px;
 }
 
- a.button:hover {
-	color: rgba(255, 255, 255, 0.85);
-	box-shadow: rgba(30, 22, 54, 0.7) 0 0px 0px 40px inset;
+footer .container .right{
+    flex: 3;
+    padding-left:50px;
 }
 
-/* #content{
-    position: relative;
-    max-width: 550px;
-    margin: 10px auto;
-    border: 1px solid black;
-  } */
+footer .container .right{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+footer .container .right .list{
+    flex: 1;
+    margin-left:20px;
+}
+
+footer .container .right .list h2{
+    padding-left: 5px;
+    padding-right: 5px;
+    margin: 0;
+    padding-bottom: 10px;
+    border-bottom: 1px solid white;
+}
+
+footer .container .right .list ul{
+    list-style: none;
+    padding: 0;
+}
+
+footer .container .right .list ul li{
+    padding: 5px 5px;
+}
+
+footer .container .right .list ul li:hover{
+    background: #222;
+}

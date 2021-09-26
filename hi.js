@@ -46,7 +46,7 @@ app.get('/', function(request, response) {
     //     response.end(data, 'utf-8');
     // }); 
     // sql.list(request, response);
-    response.render('test.html');
+    response.render('main.html');
 });
 
 // 로그인

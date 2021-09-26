@@ -2,66 +2,98 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>교대로</title>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./test.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
 </head>
 <body>
-    <header>
-        <nav>
-            <ul>
-                <script>
-                    var s = false;
-                    function state(){
-                        if (document.cookie){
-                            s = true;
-                            document.write('Logout');
-                        }
-                        else {
-                            s = false;
-                            document.write('Login');
-                        }
-                    }
-                    function clickEvent(){
-                        if (s==false){
-                            window.location.href = "/login";
-                        }
-                        else {
-                            window.location.href = "/logout";
-                        }
-                    }
-                    function show(){
-                        if (document.cookie){
-                            document.write('MyPage');
-                            document.getElementById("mypage").style.display ='block';
-                        }
-                    }
-                </script>
-                <li><a onclick="location.href = '/'">Home</a></li>
-                <li><a id="mypage" style="display:none" onclick="location.href = '/user'"><script>show();</script></a><li>
-                <li><a onclick="clickEvent();"><script>state();</script></a></li>
-            </ul>
-        </nav>
-        <div><h1>교대로</h1></div>
-        <link href="./main.css" rel="stylesheet" type="text/css" />
-    </header>
-    <div id = "content">
-    <section >
-        <a class="button" onclick="location.href = '/restaurant'">음식점</a>
-        <a class="button" onclick="location.href = '/cafe'">카페</a>
-    </section>
-    <section>
-        <p id = "text"></p>
-        <script>
-            var str = document.getElementById("text");
-            str.innerHTML = `<% for (var i=0;i<data.length;i++){ %>
-                            <a onclick="location.href = '/restaurant/<%= data[i].store_name %>'"><%= data[i].store_name %></a>
-                            <br><br> <% } %>`;
-        </script>
-    </section>
+    <script>
+        var s = false;
+        function state(){
+            if (document.cookie){
+                s = true;
+                document.write('Logout');
+            }
+            else {
+                s = false;
+                document.write('Login');
+            }
+        }
+        function clickEvent(){
+            if (s==false){
+                window.location.href = "/login";
+            }
+            else {
+                window.location.href = "/logout";
+            }
+        }
+        function show(){
+            if (document.cookie){
+                document.write('MyPage');
+                document.getElementById("mypage").style.display ='block';
+            }
+        }
+    </script>
+    <div class="nav">
+        <div class="logo">
+            <img src="/img/gyodaeroLogo.jpg" alt="">
+        </div>
+        <div class="nav_but">
+            <a onclick="location.href = '/'">Home</a>
+            <a onclick="clickEvent();"><script>state();</script></a>
+            <a id="mypage" style="display:none" onclick="location.href = '/user'"><script>show();</script></a>
+        </div>
     </div>
 
+    <section class="header">
+        <div class="title">
+            <h1>FRONT END</h1>
+        </div>
+    </section>
+
+    <section class="intro">
+        <div class="card">
+            <a class="button" onclick="location.href = '/restaurant'"><img src="/img/resLogo.jpg" alt=""></a>
+            <h1><a class="button" onclick="location.href = '/restaurant'">음식점</a></h1>
+        </div>
+        <div class="card">
+            <a class="button" onclick="location.href = '/cafe'"><img src="/img/cafeLogo.jpg" alt=""></a>
+            <h1><a class="button" onclick="location.href = '/cafe'">카페</a></h1>
+        </div>
+    </section>
+
     <footer>
-        
+        <div class="container">
+            <div class="left">
+                <h1>KNUT X<br> GYODAERO</h1>
+                <div class="sns">
+                    <i class="fab fa-twitter"></i>
+                    <i class="fab fa-facebook-square"></i>
+                    <i class="fab fa-instagram"></i>
+                    <i class="fab fa-github"></i>
+                </div>
+            </div>
+            <div class="right">
+                <div class="list">
+                    <h2>DEVELOPER</h2>
+                    <ul>
+                        <li>신기원</li>
+                        <li>양승현</li>
+                        <li>이재원</li>
+                    </ul>
+                </div>
+                <div class="list">
+                    <h2>EMAIL</h2>
+                    <ul>
+                        <li>tlsrldnjs@gmail.com</li>
+                        <li>didtmdgus@gmail.com</li>
+                        <li>dlwodnjs@gmail.com</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
     </footer>
 </body>
+</html>
